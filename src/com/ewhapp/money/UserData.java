@@ -14,16 +14,25 @@ public class UserData {
 	public static final int SAVEOBJ_ALCOHOL = 2;
 	public static final int SAVEOBJ_CIGARETTE = 3;
 	public static final int SAVEOBJ_TAXI = 4;
-	public static final int NUM_SAVEOBJS = 5;
-	public static final long[] PRICE_SAVEOBJS = { 4000L, 5000L, 3500L, 2500L, 5000L };
+	public static final int SAVEOBJ_CLOTHES = 5;
+	public static final int SAVEOBJ_COSMETIC = 6;
+	public static final int SAVEOBJ_MOVIE = 7;
+	public static final int SAVEOBJ_ETC = 8;
+	public static final int NUM_SAVEOBJS = 9;
+	public static final long[] PRICE_SAVEOBJS = { 4000L, 5000L, 3500L, 2500L, 5000L,
+		50000L, 20000L, 9000L, 10000L };
 	public static final int[] RESOURCES_SAVEOBJ_OFF = {
 			R.drawable.btn_coffee_off, R.drawable.btn_food_off,
 			R.drawable.btn_alcohol_off, R.drawable.btn_cigarette_off,
-			R.drawable.btn_taxi_off };
+			R.drawable.btn_taxi_off, R.drawable.btn_clothes_off,
+			R.drawable.btn_cosmetic_off, R.drawable.btn_movie_off,
+			R.drawable.btn_etc_off };
 	public static final int[] RESOURCES_SAVEOBJ_ON = {
 			R.drawable.btn_coffee_on, R.drawable.btn_food_on,
 			R.drawable.btn_alcohol_on, R.drawable.btn_cigarette_on,
-			R.drawable.btn_taxi_on };
+			R.drawable.btn_taxi_on, R.drawable.btn_clothes_on,
+			R.drawable.btn_cosmetic_on, R.drawable.btn_movie_on,
+			R.drawable.btn_etc_on };
 
 	private String goalName = "";
 	private long goalMoney = 0L;
@@ -113,7 +122,7 @@ public class UserData {
 
 		editor.putString("GoalName", goalName);
 		editor.putLong("GoalMoney", goalMoney);
-		for (int i = 0; i < 5; i++) {
+		for (int i = 0; i < NUM_SAVEOBJS; i++) {
 			SaveObjectInfo nowObj = saveObjList.get(i);
 			editor.putBoolean(i + "_use", nowObj.isUse());
 			editor.putLong(i + "_money", nowObj.getMoney());
@@ -151,12 +160,16 @@ public class UserData {
 		}
 		
 		saveObjList = new ArrayList<UserData.SaveObjectInfo>();
-		for (int i = 0; i < 5; i++) {
-			SaveObjectInfo nowInfo = new SaveObjectInfo(i, ((Long) map.get(i
-					+ "_money")).longValue());
-			if (((Boolean) map.get(i + "_use")).booleanValue())
-				nowInfo.use();
-			nowInfo.setSaveMoney(((Long) map.get(i + "_save")).longValue());
+		for (int i = 0; i < NUM_SAVEOBJS; i++) {
+			SaveObjectInfo nowInfo;
+			try {
+				nowInfo = new SaveObjectInfo(i, ((Long) map.get(i + "_money")).longValue());
+				if (((Boolean) map.get(i + "_use")).booleanValue())
+					nowInfo.use();
+				nowInfo.setSaveMoney(((Long) map.get(i + "_save")).longValue());
+			} catch(NullPointerException e) {
+				nowInfo = new SaveObjectInfo(i, PRICE_SAVEOBJS[i]);
+			}
 			saveObjList.add(nowInfo);
 		}
 		return true;
@@ -259,7 +272,7 @@ public class UserData {
 
 	public static UserData sharedUserData(Context ctx) {
 		if (userData == null) {
-			userData = new UserData(ctx);
+			userData = new UserData(ctx.getApplicationContext());
 		}
 		return userData;
 	}

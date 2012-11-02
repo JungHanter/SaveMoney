@@ -51,290 +51,507 @@
         android:gravity="center"
         android:textSize="20sp" />
     
-    <LinearLayout
-    	android:layout_width="fill_parent"
+    <ScrollView
+        android:layout_width="fill_parent"
     	android:layout_height="fill_parent"
-    	android:orientation="vertical"
     	android:background="#dfdfdf"
     	android:paddingTop="1dip"
     	android:paddingBottom="1dip" >
-
-	    <RelativeLayout
-	        android:layout_width="fill_parent"
-	        android:layout_height="0dp"
-	        android:layout_weight="1"
-	        android:layout_marginTop="1dip"
-	        android:layout_marginBottom="1dip"
-	        android:background="#ffffff" >
+        
+	    <LinearLayout
+	    	android:layout_width="fill_parent"
+	    	android:layout_height="fill_parent"
+	    	android:orientation="vertical"
+	    	android:background="#dfdfdf">
 	
-	        <ImageView
-	            android:id="@+id/setobj_item_img_0"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_alignParentLeft="true"
-	            android:layout_centerVertical="true"
-	            android:layout_marginBottom="8dip"
-	            android:layout_marginLeft="4dip"
-	            android:layout_marginTop="8dip"
-	            android:clickable="true"
-	            android:src="@drawable/btn_coffee_off" />
-
-	        <ImageView
-	            android:id="@+id/setobj_btn_up_0"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_alignParentRight="true"
-	            android:layout_centerVertical="true"
-	            android:layout_marginRight="12dp"
-	            android:clickable="true"
-	            android:src="@drawable/btn_up_off" />
-
-	        <EditText
-	            android:id="@+id/setobj_edt_money_0"
-	            android:background="@drawable/moneyedit_style"
-	            android:layout_width="120dip"
-	            android:layout_height="wrap_content"
-	            android:layout_centerVertical="true"
-	            android:layout_toLeftOf="@+id/setobj_btn_up_0"
-	            android:ems="10"
-	            android:layout_marginRight="8dp"
-	            android:layout_marginLeft="8dp"
-	            android:inputType="number"
-	            android:textColor="#dfdfdf"
-	            android:gravity="center" />
-	            	        
-   	        <ImageView
-   	            android:id="@+id/setobj_btn_down_0"
-   	            android:layout_width="wrap_content"
-   	            android:layout_height="wrap_content"
-   	            android:layout_centerVertical="true"
-   	            android:layout_toLeftOf="@+id/setobj_edt_money_0"
-   	            android:clickable="true"
-   	            android:src="@drawable/btn_down_off" />
-
-	    </RelativeLayout>
+		    <RelativeLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="85dp"
+		        android:layout_marginTop="1dip"
+		        android:layout_marginBottom="1dip"
+		        android:background="#ffffff" >
+		
+		        <ImageView
+		            android:id="@+id/setobj_item_img_0"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentLeft="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginBottom="8dip"
+		            android:layout_marginLeft="4dip"
+		            android:layout_marginTop="8dip"
+		            android:clickable="true"
+		            android:src="@drawable/btn_coffee_off" />
+	
+		        <ImageView
+		            android:id="@+id/setobj_btn_up_0"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginRight="12dp"
+		            android:clickable="true"
+		            android:src="@drawable/btn_up_off" />
+	
+		        <EditText
+		            android:id="@+id/setobj_edt_money_0"
+		            android:background="@drawable/moneyedit_style"
+		            android:layout_width="120dip"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:layout_toLeftOf="@+id/setobj_btn_up_0"
+		            android:ems="10"
+		            android:layout_marginRight="8dp"
+		            android:layout_marginLeft="8dp"
+		            android:inputType="number"
+		            android:textColor="#dfdfdf"
+		            android:gravity="center" />
+		            	        
+	   	        <ImageView
+	   	            android:id="@+id/setobj_btn_down_0"
+	   	            android:layout_width="wrap_content"
+	   	            android:layout_height="wrap_content"
+	   	            android:layout_centerVertical="true"
+	   	            android:layout_toLeftOf="@+id/setobj_edt_money_0"
+	   	            android:clickable="true"
+	   	            android:src="@drawable/btn_down_off" />
+	
+		    </RelativeLayout>
+		    
+		    <RelativeLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="85dp"
+		        android:layout_marginTop="1dip"
+		        android:layout_marginBottom="1dip"
+		        android:background="#ffffff" >
+		
+		        <ImageView
+		            android:id="@+id/setobj_item_img_1"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentLeft="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginBottom="8dip"
+		            android:layout_marginLeft="4dip"
+		            android:layout_marginTop="8dip"
+		            android:clickable="true"
+		            android:padding="0dip"
+		            android:src="@drawable/btn_food_off" />
+	
+		        <ImageView
+		            android:id="@+id/setobj_btn_up_1"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginRight="12dp"
+		            android:clickable="true"
+		            android:src="@drawable/btn_up_off" />
+	
+		        <EditText
+		            android:id="@+id/setobj_edt_money_1"
+		            android:background="@drawable/moneyedit_style"
+		            android:layout_width="120dip"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:layout_toLeftOf="@+id/setobj_btn_up_1"
+		            android:ems="10"
+		            android:layout_marginRight="8dp"
+		            android:layout_marginLeft="8dp"
+		            android:inputType="number"
+		            android:textColor="#dfdfdf"
+		            android:gravity="center" />
+		            	        
+	   	        <ImageView
+	   	            android:id="@+id/setobj_btn_down_1"
+	   	            android:layout_width="wrap_content"
+	   	            android:layout_height="wrap_content"
+	   	            android:layout_centerVertical="true"
+	   	            android:layout_toLeftOf="@+id/setobj_edt_money_1"
+	   	            android:clickable="true"
+	   	            android:src="@drawable/btn_down_off" />
+	
+		    </RelativeLayout>
+		   
+		    <RelativeLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="85dp"
+		        android:layout_marginTop="1dip"
+		        android:layout_marginBottom="1dip"
+		        android:background="#ffffff" >
+		
+		        <ImageView
+		            android:id="@+id/setobj_item_img_2"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentLeft="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginBottom="8dip"
+		            android:layout_marginLeft="4dip"
+		            android:layout_marginTop="8dip"
+		            android:clickable="true"
+		            android:src="@drawable/btn_alcohol_off" />
+	
+		        <ImageView
+		            android:id="@+id/setobj_btn_up_2"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginRight="12dp"
+		            android:clickable="true"
+		            android:src="@drawable/btn_up_off" />
+	
+		        <EditText
+		            android:id="@+id/setobj_edt_money_2"
+		            android:background="@drawable/moneyedit_style"
+		            android:layout_width="120dip"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:layout_toLeftOf="@+id/setobj_btn_up_2"
+		            android:ems="10"
+		            android:layout_marginRight="8dp"
+		            android:layout_marginLeft="8dp"
+		            android:inputType="number"
+		            android:textColor="#dfdfdf"
+		            android:gravity="center" />
+		            	        
+	   	        <ImageView
+	   	            android:id="@+id/setobj_btn_down_2"
+	   	            android:layout_width="wrap_content"
+	   	            android:layout_height="wrap_content"
+	   	            android:layout_centerVertical="true"
+	   	            android:layout_toLeftOf="@+id/setobj_edt_money_2"
+	   	            android:clickable="true"
+	   	            android:src="@drawable/btn_down_off" />
+	
+		    </RelativeLayout>
+		    
+		    <RelativeLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="85dp"
+		        android:layout_marginTop="1dip"
+		        android:layout_marginBottom="1dip"
+		        android:background="#ffffff" >
+		
+		        <ImageView
+		            android:id="@+id/setobj_item_img_3"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentLeft="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginBottom="8dip"
+		            android:layout_marginLeft="4dip"
+		            android:layout_marginTop="8dip"
+		            android:clickable="true"
+		            android:src="@drawable/btn_cigarette_off" />
+	
+		        <ImageView
+		            android:id="@+id/setobj_btn_up_3"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginRight="12dp"
+		            android:clickable="true"
+		            android:src="@drawable/btn_up_off" />
+	
+		        <EditText
+		            android:id="@+id/setobj_edt_money_3"
+		            android:background="@drawable/moneyedit_style"
+		            android:layout_width="120dip"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:layout_toLeftOf="@+id/setobj_btn_up_3"
+		            android:ems="10"
+		            android:layout_marginRight="8dp"
+		            android:layout_marginLeft="8dp"
+		            android:inputType="number"
+		            android:textColor="#dfdfdf"
+		            android:gravity="center" />
+		            	        
+	   	        <ImageView
+	   	            android:id="@+id/setobj_btn_down_3"
+	   	            android:layout_width="wrap_content"
+	   	            android:layout_height="wrap_content"
+	   	            android:layout_centerVertical="true"
+	   	            android:layout_toLeftOf="@+id/setobj_edt_money_3"
+	   	            android:clickable="true"
+	   	            android:src="@drawable/btn_down_off" />
+	
+		    </RelativeLayout>
+		    
+		    <RelativeLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="85dp"
+		        android:layout_marginTop="1dip"
+		        android:layout_marginBottom="1dip"
+		        android:background="#ffffff" >
+		
+		        <ImageView
+		            android:id="@+id/setobj_item_img_4"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentLeft="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginBottom="8dip"
+		            android:layout_marginLeft="4dip"
+		            android:layout_marginTop="8dip"
+		            android:clickable="true"
+		            android:src="@drawable/btn_taxi_off" />
+	
+		        <ImageView
+		            android:id="@+id/setobj_btn_up_4"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginRight="12dp"
+		            android:clickable="true"
+		            android:src="@drawable/btn_up_off" />
+	
+		        <EditText
+		            android:id="@+id/setobj_edt_money_4"
+		            android:background="@drawable/moneyedit_style"
+		            android:layout_width="120dip"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:layout_toLeftOf="@+id/setobj_btn_up_4"
+		            android:ems="10"
+		            android:layout_marginRight="8dp"
+		            android:layout_marginLeft="8dp"
+		            android:inputType="number"
+		            android:textColor="#dfdfdf"
+		            android:gravity="center" />
+		            	        
+	   	        <ImageView
+	   	            android:id="@+id/setobj_btn_down_4"
+	   	            android:layout_width="wrap_content"
+	   	            android:layout_height="wrap_content"
+	   	            android:layout_centerVertical="true"
+	   	            android:layout_toLeftOf="@+id/setobj_edt_money_4"
+	   	            android:clickable="true"
+	   	            android:src="@drawable/btn_down_off" />
+	
+		    </RelativeLayout>
+		    
+		    <RelativeLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="85dp"
+		        android:layout_marginTop="1dip"
+		        android:layout_marginBottom="1dip"
+		        android:background="#ffffff" >
+		
+		        <ImageView
+		            android:id="@+id/setobj_item_img_5"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentLeft="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginBottom="8dip"
+		            android:layout_marginLeft="4dip"
+		            android:layout_marginTop="8dip"
+		            android:clickable="true"
+		            android:src="@drawable/btn_clothes_off" />
+	
+		        <ImageView
+		            android:id="@+id/setobj_btn_up_5"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginRight="12dp"
+		            android:clickable="true"
+		            android:src="@drawable/btn_up_off" />
+	
+		        <EditText
+		            android:id="@+id/setobj_edt_money_5"
+		            android:background="@drawable/moneyedit_style"
+		            android:layout_width="120dip"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:layout_toLeftOf="@+id/setobj_btn_up_5"
+		            android:ems="10"
+		            android:layout_marginRight="8dp"
+		            android:layout_marginLeft="8dp"
+		            android:inputType="number"
+		            android:textColor="#dfdfdf"
+		            android:gravity="center" />
+		            	        
+	   	        <ImageView
+	   	            android:id="@+id/setobj_btn_down_5"
+	   	            android:layout_width="wrap_content"
+	   	            android:layout_height="wrap_content"
+	   	            android:layout_centerVertical="true"
+	   	            android:layout_toLeftOf="@+id/setobj_edt_money_5"
+	   	            android:clickable="true"
+	   	            android:src="@drawable/btn_down_off" />
+	
+		    </RelativeLayout>
+		    
+		    <RelativeLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="85dp"
+		        android:layout_marginTop="1dip"
+		        android:layout_marginBottom="1dip"
+		        android:background="#ffffff" >
+		
+		        <ImageView
+		            android:id="@+id/setobj_item_img_6"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentLeft="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginBottom="8dip"
+		            android:layout_marginLeft="4dip"
+		            android:layout_marginTop="8dip"
+		            android:clickable="true"
+		            android:src="@drawable/btn_cosmetic_off" />
+	
+		        <ImageView
+		            android:id="@+id/setobj_btn_up_6"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginRight="12dp"
+		            android:clickable="true"
+		            android:src="@drawable/btn_up_off" />
+	
+		        <EditText
+		            android:id="@+id/setobj_edt_money_6"
+		            android:background="@drawable/moneyedit_style"
+		            android:layout_width="120dip"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:layout_toLeftOf="@+id/setobj_btn_up_6"
+		            android:ems="10"
+		            android:layout_marginRight="8dp"
+		            android:layout_marginLeft="8dp"
+		            android:inputType="number"
+		            android:textColor="#dfdfdf"
+		            android:gravity="center" />
+		            	        
+	   	        <ImageView
+	   	            android:id="@+id/setobj_btn_down_6"
+	   	            android:layout_width="wrap_content"
+	   	            android:layout_height="wrap_content"
+	   	            android:layout_centerVertical="true"
+	   	            android:layout_toLeftOf="@+id/setobj_edt_money_6"
+	   	            android:clickable="true"
+	   	            android:src="@drawable/btn_down_off" />
+	
+		    </RelativeLayout>
+		    
+		    <RelativeLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="85dp"
+		        android:layout_marginTop="1dip"
+		        android:layout_marginBottom="1dip"
+		        android:background="#ffffff" >
+		
+		        <ImageView
+		            android:id="@+id/setobj_item_img_7"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentLeft="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginBottom="8dip"
+		            android:layout_marginLeft="4dip"
+		            android:layout_marginTop="8dip"
+		            android:clickable="true"
+		            android:src="@drawable/btn_movie_off" />
+	
+		        <ImageView
+		            android:id="@+id/setobj_btn_up_7"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginRight="12dp"
+		            android:clickable="true"
+		            android:src="@drawable/btn_up_off" />
+	
+		        <EditText
+		            android:id="@+id/setobj_edt_money_7"
+		            android:background="@drawable/moneyedit_style"
+		            android:layout_width="120dip"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:layout_toLeftOf="@+id/setobj_btn_up_7"
+		            android:ems="10"
+		            android:layout_marginRight="8dp"
+		            android:layout_marginLeft="8dp"
+		            android:inputType="number"
+		            android:textColor="#dfdfdf"
+		            android:gravity="center" />
+		            	        
+	   	        <ImageView
+	   	            android:id="@+id/setobj_btn_down_7"
+	   	            android:layout_width="wrap_content"
+	   	            android:layout_height="wrap_content"
+	   	            android:layout_centerVertical="true"
+	   	            android:layout_toLeftOf="@+id/setobj_edt_money_7"
+	   	            android:clickable="true"
+	   	            android:src="@drawable/btn_down_off" />
+	
+		    </RelativeLayout>
+		    
+		    <RelativeLayout
+		        android:layout_width="fill_parent"
+		        android:layout_height="85dp"
+		        android:layout_marginTop="1dip"
+		        android:layout_marginBottom="1dip"
+		        android:background="#ffffff" >
+		
+		        <ImageView
+		            android:id="@+id/setobj_item_img_8"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentLeft="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginBottom="8dip"
+		            android:layout_marginLeft="4dip"
+		            android:layout_marginTop="8dip"
+		            android:clickable="true"
+		            android:src="@drawable/btn_etc_off" />
+	
+		        <ImageView
+		            android:id="@+id/setobj_btn_up_8"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginRight="12dp"
+		            android:clickable="true"
+		            android:src="@drawable/btn_up_off" />
+	
+		        <EditText
+		            android:id="@+id/setobj_edt_money_8"
+		            android:background="@drawable/moneyedit_style"
+		            android:layout_width="120dip"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:layout_toLeftOf="@+id/setobj_btn_up_8"
+		            android:ems="10"
+		            android:layout_marginRight="8dp"
+		            android:layout_marginLeft="8dp"
+		            android:inputType="number"
+		            android:textColor="#dfdfdf"
+		            android:gravity="center" />
+		            	        
+	   	        <ImageView
+	   	            android:id="@+id/setobj_btn_down_8"
+	   	            android:layout_width="wrap_content"
+	   	            android:layout_height="wrap_content"
+	   	            android:layout_centerVertical="true"
+	   	            android:layout_toLeftOf="@+id/setobj_edt_money_8"
+	   	            android:clickable="true"
+	   	            android:src="@drawable/btn_down_off" />
+	
+		    </RelativeLayout>
 	    
-	    <RelativeLayout
-	        android:layout_width="fill_parent"
-	        android:layout_height="0dp"
-	        android:layout_weight="1"
-	        android:layout_marginTop="1dip"
-	        android:layout_marginBottom="1dip"
-	        android:background="#ffffff" >
-	
-	        <ImageView
-	            android:id="@+id/setobj_item_img_1"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_alignParentLeft="true"
-	            android:layout_centerVertical="true"
-	            android:layout_marginBottom="8dip"
-	            android:layout_marginLeft="4dip"
-	            android:layout_marginTop="8dip"
-	            android:clickable="true"
-	            android:padding="0dip"
-	            android:src="@drawable/btn_food_off" />
-
-	        <ImageView
-	            android:id="@+id/setobj_btn_up_1"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_alignParentRight="true"
-	            android:layout_centerVertical="true"
-	            android:layout_marginRight="12dp"
-	            android:clickable="true"
-	            android:src="@drawable/btn_up_off" />
-
-	        <EditText
-	            android:id="@+id/setobj_edt_money_1"
-	            android:background="@drawable/moneyedit_style"
-	            android:layout_width="120dip"
-	            android:layout_height="wrap_content"
-	            android:layout_centerVertical="true"
-	            android:layout_toLeftOf="@+id/setobj_btn_up_1"
-	            android:ems="10"
-	            android:layout_marginRight="8dp"
-	            android:layout_marginLeft="8dp"
-	            android:inputType="number"
-	            android:textColor="#dfdfdf"
-	            android:gravity="center" />
-	            	        
-   	        <ImageView
-   	            android:id="@+id/setobj_btn_down_1"
-   	            android:layout_width="wrap_content"
-   	            android:layout_height="wrap_content"
-   	            android:layout_centerVertical="true"
-   	            android:layout_toLeftOf="@+id/setobj_edt_money_1"
-   	            android:clickable="true"
-   	            android:src="@drawable/btn_down_off" />
-
-	    </RelativeLayout>
-	   
-	    <RelativeLayout
-	        android:layout_width="fill_parent"
-	        android:layout_height="0dp"
-	        android:layout_weight="1"
-	        android:layout_marginTop="1dip"
-	        android:layout_marginBottom="1dip"
-	        android:background="#ffffff" >
-	
-	        <ImageView
-	            android:id="@+id/setobj_item_img_2"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_alignParentLeft="true"
-	            android:layout_centerVertical="true"
-	            android:layout_marginBottom="8dip"
-	            android:layout_marginLeft="4dip"
-	            android:layout_marginTop="8dip"
-	            android:clickable="true"
-	            android:src="@drawable/btn_alcohol_off" />
-
-	        <ImageView
-	            android:id="@+id/setobj_btn_up_2"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_alignParentRight="true"
-	            android:layout_centerVertical="true"
-	            android:layout_marginRight="12dp"
-	            android:clickable="true"
-	            android:src="@drawable/btn_up_off" />
-
-	        <EditText
-	            android:id="@+id/setobj_edt_money_2"
-	            android:background="@drawable/moneyedit_style"
-	            android:layout_width="120dip"
-	            android:layout_height="wrap_content"
-	            android:layout_centerVertical="true"
-	            android:layout_toLeftOf="@+id/setobj_btn_up_2"
-	            android:ems="10"
-	            android:layout_marginRight="8dp"
-	            android:layout_marginLeft="8dp"
-	            android:inputType="number"
-	            android:textColor="#dfdfdf"
-	            android:gravity="center" />
-	            	        
-   	        <ImageView
-   	            android:id="@+id/setobj_btn_down_2"
-   	            android:layout_width="wrap_content"
-   	            android:layout_height="wrap_content"
-   	            android:layout_centerVertical="true"
-   	            android:layout_toLeftOf="@+id/setobj_edt_money_2"
-   	            android:clickable="true"
-   	            android:src="@drawable/btn_down_off" />
-
-	    </RelativeLayout>
-	    
-	    <RelativeLayout
-	        android:layout_width="fill_parent"
-	        android:layout_height="0dp"
-	        android:layout_weight="1"
-	        android:layout_marginTop="1dip"
-	        android:layout_marginBottom="1dip"
-	        android:background="#ffffff" >
-	
-	        <ImageView
-	            android:id="@+id/setobj_item_img_3"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_alignParentLeft="true"
-	            android:layout_centerVertical="true"
-	            android:layout_marginBottom="8dip"
-	            android:layout_marginLeft="4dip"
-	            android:layout_marginTop="8dip"
-	            android:clickable="true"
-	            android:src="@drawable/btn_cigarette_off" />
-
-	        <ImageView
-	            android:id="@+id/setobj_btn_up_3"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_alignParentRight="true"
-	            android:layout_centerVertical="true"
-	            android:layout_marginRight="12dp"
-	            android:clickable="true"
-	            android:src="@drawable/btn_up_off" />
-
-	        <EditText
-	            android:id="@+id/setobj_edt_money_3"
-	            android:background="@drawable/moneyedit_style"
-	            android:layout_width="120dip"
-	            android:layout_height="wrap_content"
-	            android:layout_centerVertical="true"
-	            android:layout_toLeftOf="@+id/setobj_btn_up_3"
-	            android:ems="10"
-	            android:layout_marginRight="8dp"
-	            android:layout_marginLeft="8dp"
-	            android:inputType="number"
-	            android:textColor="#dfdfdf"
-	            android:gravity="center" />
-	            	        
-   	        <ImageView
-   	            android:id="@+id/setobj_btn_down_3"
-   	            android:layout_width="wrap_content"
-   	            android:layout_height="wrap_content"
-   	            android:layout_centerVertical="true"
-   	            android:layout_toLeftOf="@+id/setobj_edt_money_3"
-   	            android:clickable="true"
-   	            android:src="@drawable/btn_down_off" />
-
-	    </RelativeLayout>
-	    
-	    <RelativeLayout
-	        android:layout_width="fill_parent"
-	        android:layout_height="0dp"
-	        android:layout_weight="1"
-	        android:layout_marginTop="1dip"
-	        android:layout_marginBottom="1dip"
-	        android:background="#ffffff" >
-	
-	        <ImageView
-	            android:id="@+id/setobj_item_img_4"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_alignParentLeft="true"
-	            android:layout_centerVertical="true"
-	            android:layout_marginBottom="8dip"
-	            android:layout_marginLeft="4dip"
-	            android:layout_marginTop="8dip"
-	            android:clickable="true"
-	            android:src="@drawable/btn_taxi_off" />
-
-	        <ImageView
-	            android:id="@+id/setobj_btn_up_4"
-	            android:layout_width="wrap_content"
-	            android:layout_height="wrap_content"
-	            android:layout_alignParentRight="true"
-	            android:layout_centerVertical="true"
-	            android:layout_marginRight="12dp"
-	            android:clickable="true"
-	            android:src="@drawable/btn_up_off" />
-
-	        <EditText
-	            android:id="@+id/setobj_edt_money_4"
-	            android:background="@drawable/moneyedit_style"
-	            android:layout_width="120dip"
-	            android:layout_height="wrap_content"
-	            android:layout_centerVertical="true"
-	            android:layout_toLeftOf="@+id/setobj_btn_up_4"
-	            android:ems="10"
-	            android:layout_marginRight="8dp"
-	            android:layout_marginLeft="8dp"
-	            android:inputType="number"
-	            android:textColor="#dfdfdf"
-	            android:gravity="center" />
-	            	        
-   	        <ImageView
-   	            android:id="@+id/setobj_btn_down_4"
-   	            android:layout_width="wrap_content"
-   	            android:layout_height="wrap_content"
-   	            android:layout_centerVertical="true"
-   	            android:layout_toLeftOf="@+id/setobj_edt_money_4"
-   	            android:clickable="true"
-   	            android:src="@drawable/btn_down_off" />
-
-	    </RelativeLayout>
-	    
-    </LinearLayout>
+	    </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

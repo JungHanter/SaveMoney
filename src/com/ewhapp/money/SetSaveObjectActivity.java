@@ -106,11 +106,11 @@ public class SetSaveObjectActivity extends Activity {
 			}
 		});
 		
-		saveobj_img = new ImageView[5];
-		saveobj_btn_up = new ImageView[5];
-		saveobj_btn_down = new ImageView[5];
-		saveobj_price = new EditText[5];
-		saveobj_isselect = new boolean[5];
+		saveobj_img = new ImageView[UserData.NUM_SAVEOBJS];
+		saveobj_btn_up = new ImageView[UserData.NUM_SAVEOBJS];
+		saveobj_btn_down = new ImageView[UserData.NUM_SAVEOBJS];
+		saveobj_price = new EditText[UserData.NUM_SAVEOBJS];
+		saveobj_isselect = new boolean[UserData.NUM_SAVEOBJS];
 		
 		for(int i=0; i<UserData.NUM_SAVEOBJS; i++) {
 			final UserData.SaveObjectInfo nowObj = objList.get(i);
