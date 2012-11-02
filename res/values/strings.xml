@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, SaveMoneyActivity!</string>
+    <string name="app_name">SaveMoney</string>
+    <string name="ewhapp">Ewha Appcenter</string>
+    <string name="app_title">지름확인서</string>
+    <string name="txt_addGoal">목표 추가</string>
+    <string name="txt_signal_add">+</string>
+    <string name="txt_whatGoal">당신이 원하는 목표는?</string>
+    <string name="txt_goalMoney">목표금액 : </string>
+    <string name="txt_goalRate">0%</string>
+    <string name="txt_won"> 원</string>
+    <string name="txt_confirmGoalReset">벌써 또 다른 지름을?</string>
+    <string name="txt_changeGoal">목표 변경</string>
+    <string name="txt_retainGoal">목표 유지</string>
+    <string name="txt_whatSaveObject">어떤 것을 아끼고 싶으신가요?</string>
+
+</resources>

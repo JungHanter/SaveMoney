@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff" >
+
+    <!-- @+id/confirmList_img, @+id/confirmList_btn_increase,
+     @+id/confirmList_money, @+id/confirmList_btn_decrease-->
+	<ImageView
+	    android:id="@+id/confirmList_img"
+	    android:layout_width="55dip"
+	    android:layout_height="55dip"
+	    android:layout_alignParentLeft="true"
+	    android:layout_centerVertical="true"
+	    android:layout_marginBottom="8dip"
+	    android:layout_marginLeft="24dip"
+	    android:layout_marginTop="8dip"
+	    android:clickable="true"
+	    android:src="@drawable/btn_coffee_on" />
+	
+	<ImageView
+	    android:id="@+id/confirmList_btn_increase"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentRight="true"
+	    android:layout_centerVertical="true"
+	    android:layout_marginRight="20dp"
+	    android:clickable="true"
+	    android:src="@drawable/btn_up_on" />
+	
+	<TextView
+	    android:id="@+id/confirmList_money"
+	    android:layout_width="120dip"
+	    android:layout_height="wrap_content"
+	    android:layout_centerVertical="true"
+	    android:layout_toLeftOf="@+id/confirmList_btn_increase"
+	    android:ems="10"
+	    android:layout_marginRight="8dp"
+	    android:layout_marginLeft="8dp"
+	    android:text="5000"
+	    android:textSize="20sp"
+	    android:textColor="#000000"
+	    android:gravity="center" />
+	    	        
+   <ImageView
+       android:id="@+id/confirmList_btn_decrease"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_centerVertical="true"
+       android:layout_toLeftOf="@+id/confirmList_money"
+       android:clickable="true"
+       android:src="@drawable/btn_down_on" />
+	
+</RelativeLayout>
