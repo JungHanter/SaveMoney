@@ -96,9 +96,6 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.main);
 
 		btn_AddGoal = (ImageView) findViewById(R.id.main_btn_addGoal);
-		imgv_goalImg = (ImageView) findViewById(R.id.main_img_goal);
-		txtv_goalMoney = (TextView) findViewById(R.id.main_txt_money);
-		txtv_goalRate = (TextView) findViewById(R.id.main_txt_rate);
 
 		btn_AddGoal.setOnClickListener(new View.OnClickListener() {
 			@Override
@@ -113,6 +110,8 @@ public class MainActivity extends Activity {
 		arItem.add(new ListItem(0, "3000", R.drawable.btn_alcohol_on));
 		arItem.add(new ListItem(0, "4000", R.drawable.btn_coffee_on));
 		arItem.add(new ListItem(0, "4500", R.drawable.btn_food_on));
+		arItem.add(new ListItem(0, "7000", R.drawable.btn_cosmetic_on));
+		arItem.add(new ListItem(0, "10000", R.drawable.btn_movie_on));
 		
 		MultiAdapter MyAdapter = new MultiAdapter(MainActivity.this, arItem);
 		ListView MyList;
