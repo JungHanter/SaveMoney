@@ -59,6 +59,25 @@ public class UserData {
 	public void setSaveObjList(ArrayList<SaveObjectInfo> list) {
 		saveObjList = list;
 	}
+	
+	public int getUsingSaveObjSize() {
+		int cnt = 0;
+		for(SaveObjectInfo info : saveObjList) {
+			if(info.isUse())
+				cnt++;
+		}
+		return cnt;
+	}
+	
+	public ArrayList<SaveObjectInfo> getUsingSaveObjList() {
+		ArrayList<SaveObjectInfo> arr = new ArrayList<SaveObjectInfo>();
+		for(SaveObjectInfo info : saveObjList) {
+			if(info.isUse())
+				arr.add(info);
+		}
+		return arr;
+	}
+	
 
 	public String getGoalName() {
 		return goalName;

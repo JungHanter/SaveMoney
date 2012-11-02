@@ -34,8 +34,7 @@ public class RewardActivity extends Activity{
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				userData.setGoalMoney(0);
-				userData.setGoalName("");
+				userData.resetUserData(RewardActivity.this);
 				startActivity(new Intent(RewardActivity.this, SetGoalActivity.class));
 				RewardActivity.this.finish();
 			}

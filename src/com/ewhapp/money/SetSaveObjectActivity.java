@@ -232,6 +232,9 @@ public class SetSaveObjectActivity extends Activity {
 	}
 	@Override
 	public void onBackPressed() {
+		Intent intent = new Intent();
+		intent.setAction("com.ewhapp.money.SplashActivity.APPWIDGET_REQUEST");
+		sendBroadcast(intent);
 		startActivity(new Intent(SetSaveObjectActivity.this, SetGoalActivity.class));
 		this.finish();
 	}
