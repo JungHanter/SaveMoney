@@ -2,7 +2,7 @@
 <resources>
 
     <string name="hello">Hello World, SaveMoneyActivity!</string>
-    <string name="app_name">SaveMoney</string>
+    <string name="app_name">티끌모아 태산</string>
     <string name="ewhapp">Ewha Appcenter</string>
     <string name="app_title">지름확인서</string>
     <string name="txt_addGoal">목표 추가</string>

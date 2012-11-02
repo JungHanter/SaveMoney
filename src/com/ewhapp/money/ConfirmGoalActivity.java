@@ -315,9 +315,9 @@ public class ConfirmGoalActivity extends Activity {
 							new DialogInterface.OnClickListener() {
 								public void onClick(DialogInterface dialog,
 										int which) {
-									Intent intent = new Intent();
-									intent.setAction("com.ewhapp.money.SplashActivity.APPWIDGET_REQUEST");
-									sendBroadcast(intent);
+//									Intent intent = new Intent();
+//									intent.setAction("com.ewhapp.money.SplashActivity.APPWIDGET_REQUEST");
+//									sendBroadcast(intent);
 									dialog.dismiss();
 									ConfirmGoalActivity.this.finish();
 								}

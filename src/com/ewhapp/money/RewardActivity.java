@@ -35,6 +35,7 @@ public class RewardActivity extends Activity{
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				userData.resetUserData(RewardActivity.this);
+				userData.saveData(RewardActivity.this);
 				startActivity(new Intent(RewardActivity.this, SetGoalActivity.class));
 				RewardActivity.this.finish();
 			}

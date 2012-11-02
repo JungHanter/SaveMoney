@@ -152,9 +152,9 @@ public class SetGoalActivity extends Activity {
 	
 	@Override
 	public void onBackPressed() {
-		Intent intent = new Intent();
+/*		Intent intent = new Intent();
 		intent.setAction("com.ewhapp.money.SplashActivity.APPWIDGET_REQUEST");
-		sendBroadcast(intent);
+		sendBroadcast(intent);*/
 		startActivity(new Intent(SetGoalActivity.this, MainActivity.class));
 		this.finish();
 	} 

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Map;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.BitmapFactory;
 
@@ -149,6 +150,11 @@ public class UserData {
 		}
 		editor.putInt("PW", password);
 		editor.putBoolean("Lock", bLock);
+		
+		Intent intent = new Intent();
+		intent.setAction("com.ewhapp.money.SplashActivity.APPWIDGET_REQUEST");
+		ctx.sendBroadcast(intent);
+		
 		return editor.commit();
 	}
 

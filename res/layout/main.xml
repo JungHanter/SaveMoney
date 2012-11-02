@@ -52,7 +52,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="10dip"
                 android:layout_marginTop="14dip"
-                android:text="아끼고 싶은 물품을 등록해 주세요."
+                android:text="선물 하기"
                 android:textColor="#000000"
                 android:textSize="20sp" />
 
@@ -157,18 +157,29 @@
             android:layout_alignParentTop="true"
             android:layout_gravity="center"
             android:background="#88AAAAAA"
-            android:gravity="center" >
+            android:gravity="center"
+            android:orientation="vertical" >
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginBottom="60dip"
+                android:layout_marginBottom="8dip"
                 android:gravity="center"
-                android:text="예시 화면입니다."
+                android:text="예제 화면 입니다."
                 android:textColor="#F47621"
                 android:textSize="30sp"
                 android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="120dip"
+                android:gravity="center"
+                android:text="아끼고 싶은 물품을 등록해 주세요."
+                android:textColor="#F47621"
+                android:textSize="16sp"/>
         </LinearLayout>
     </RelativeLayout>
 

@@ -124,9 +124,9 @@ public class MainActivity extends Activity {
 		new AlertDialog.Builder(this).setMessage("정말 종료하시겠습니까?")
 				.setPositiveButton("확인", new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog, int which) {
-						Intent intent = new Intent();
+/*						Intent intent = new Intent();
 						intent.setAction("com.ewhapp.money.SplashActivity.APPWIDGET_REQUEST");
-						sendBroadcast(intent);
+						sendBroadcast(intent);*/
 						dialog.dismiss();
 						MainActivity.this.finish();
 					}
