@@ -392,8 +392,8 @@ public class ConfirmGoalActivity extends SaveMoneyBaseActivity {
 
 	private File getTempFile() {
 		if (isSDCARDMOUNTED()) {
-			File f = new File(Environment.getExternalStorageDirectory(),
-					mTempPhotoFileName);
+			File f = new File(Environment.getExternalStorageDirectory()
+					+ "/temp/" + mTempPhotoFileName);
 			try {
 				f.createNewFile();
 			} catch (IOException e) {
@@ -413,7 +413,7 @@ public class ConfirmGoalActivity extends SaveMoneyBaseActivity {
 	}
 
 	private void deleteTempFile(String fileName) {
-		String filePath = Environment.getExternalStorageDirectory() + "/"
+		String filePath = Environment.getExternalStorageDirectory() + "/temp/"
 				+ fileName;
 		File f = new File(filePath);
 		if (f.exists()) {
@@ -477,7 +477,7 @@ public class ConfirmGoalActivity extends SaveMoneyBaseActivity {
 				//
 				if (extras != null) {
 					String filePath = Environment.getExternalStorageDirectory()
-							+ "/" + mTempPhotoFileName;
+							+ "/temp/" + mTempPhotoFileName;
 
 					if (tempGoalBitmap != null)
 						tempGoalBitmap.recycle();
@@ -493,7 +493,7 @@ public class ConfirmGoalActivity extends SaveMoneyBaseActivity {
 				final Bundle extras2 = data.getExtras();
 				if (extras2 != null) {
 					String filePath = Environment.getExternalStorageDirectory()
-							+ "/" + mTempPhotoFileName;
+							+ "/temp/" + mTempPhotoFileName;
 
 					if (tempGoalBitmap != null)
 						tempGoalBitmap.recycle();

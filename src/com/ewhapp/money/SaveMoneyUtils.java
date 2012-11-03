@@ -1,5 +1,8 @@
 package com.ewhapp.money;
 
+import java.io.File;
+import java.io.IOException;
+
 import android.os.Environment;
 
 public class SaveMoneyUtils {
@@ -29,6 +32,14 @@ public class SaveMoneyUtils {
 		return path;
 	}
 	static public void makeNomediaFile() {
-		
+		File f = new File(Environment.getExternalStorageDirectory()
+				+ "/temp/" + ".nomedia");
+		if(!f.exists()) {
+			new File(Environment.getExternalStorageDirectory()
+				+ "/temp").mkdirs();
+			try {
+				f.createNewFile();
+			} catch (IOException e) {}
+		}
 	}
 }

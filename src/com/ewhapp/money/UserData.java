@@ -6,7 +6,6 @@ import java.util.Map;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.BitmapFactory;
 
 public class UserData {
 	private static final String PREFER_NAME = "SaveMoneyData";
