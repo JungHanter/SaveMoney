@@ -26,7 +26,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-public class SetGoalActivity extends Activity {
+public class SetGoalActivity extends SaveMoneyBaseActivity {
 	private ImageView btn_next;
 	private ImageView btn_prev;
 	private ImageView imgv_goalImg;
@@ -36,7 +36,7 @@ public class SetGoalActivity extends Activity {
 	private UserData userData;
 	
 	private boolean bSelectImg = false;
-
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -163,36 +163,6 @@ public class SetGoalActivity extends Activity {
 		imgv_goalImg.setImageBitmap(bitmap);
 	}
 
-	
-	//메뉴 버튼
-		public boolean onCreateOptionsMenu(Menu menu){
-			super.onCreateOptionsMenu(menu);
-			MenuItem item = menu.add(0,1,0,"암호 잠금 설정");
-			menu.add(0,2,0,"버전 정보");
-			menu.add(0,3,0,"이화앱센터 소개");
-			return true;
-		}
-		public boolean onOptionsItemSelected(MenuItem item){
-			switch(item.getItemId()){
-			case 1:
-				startActivity(new Intent(SetGoalActivity.this, EditPassWordActivity.class));
-				return true;
-			case 2:
-				new AlertDialog.Builder(this)
-				.setMessage("현재 버전 v0.9")
-				.setPositiveButton("확인", new DialogInterface.OnClickListener() {
-					public void onClick(DialogInterface dialog, int which) {
-						dialog.dismiss();
-					}
-				}).show();
-				return true;
-			case 3:
-				startActivity(new Intent(SetGoalActivity.this, EwhaInfoActivity.class));
-				return true;
-			}
-			return false;
-		}
-		
 	// 이미지 관련
 	private Uri imageUri;
 	private String imagePath;

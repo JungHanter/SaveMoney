@@ -17,6 +17,8 @@ public class SplashActivity extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.splash);
+		
+		UserData.bFirstResumeApp = true;
 
 		logo = (ImageView)findViewById(R.id.splashLogo);
 		

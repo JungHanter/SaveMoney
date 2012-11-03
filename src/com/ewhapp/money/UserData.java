@@ -41,6 +41,7 @@ public class UserData {
 	private boolean bLock = false;
 	private int password = -1;
 	
+	public static boolean bFirstResumeApp = true;
 	
 	public void initSaveObjList() {
 		if (saveObjList != null)
@@ -111,7 +112,8 @@ public class UserData {
 		this.goalMoney = money;
 	}
 	
-	public void setPassword(int password) {
+	public void lock(int password) {
+		bLock = true;
 		this.password = password;
 	}
 	
@@ -120,6 +122,11 @@ public class UserData {
 	}
 	
 	public boolean isLock() { return bLock; }
+	
+	public void unLock() {
+		bLock = false;
+		password = -1;
+	}
 
 	public void resetUserData(Context ctx) {
 		goalName = "";
@@ -134,6 +141,16 @@ public class UserData {
 		} catch (Exception e) {
 			;
 		}
+	}
+	
+	public boolean savePasswordData(Context ctx) {
+		SharedPreferences.Editor editor = ctx.getSharedPreferences(PREFER_NAME,
+				Context.MODE_WORLD_WRITEABLE).edit();
+		
+		editor.putInt("PW", password);
+		editor.putBoolean("Lock", bLock);
+		
+		return editor.commit();
 	}
 
 	public boolean saveData(Context ctx) {
@@ -166,8 +183,11 @@ public class UserData {
 				ctx.MODE_WORLD_READABLE);
 
 		String confirm = pref.getString("GoalName", "");
-		if (confirm.equals(""))
+		if (confirm.equals("")) {
+			password = pref.getInt("PW", -1);
+			bLock = pref.getBoolean("Lock", false);
 			return false;
+		}
 
 		Map<String, ?> map = pref.getAll();
 		goalName = confirm;
@@ -305,7 +325,9 @@ public class UserData {
 	@Override
 	protected void finalize() throws Throwable {
 		userData = null;
-
+		try {
+			bFirstResumeApp = true;
+		} catch(Exception e) {}
 		super.finalize();
 	}
 

@@ -18,7 +18,7 @@ import android.widget.ImageView;
 
 import com.ewhapp.money.UserData.SaveObjectInfo;
 
-public class SetSaveObjectActivity extends Activity {
+public class SetSaveObjectActivity extends SaveMoneyBaseActivity {
 	private UserData userData;
 	private ArrayList<SaveObjectInfo> objList;
 	
@@ -202,39 +202,9 @@ public class SetSaveObjectActivity extends Activity {
 			});
 		}
 	}
-	//메뉴 버튼
-	public boolean onCreateOptionsMenu(Menu menu){
-		super.onCreateOptionsMenu(menu);
-		MenuItem item = menu.add(0,1,0,"암호 잠금 설정");
-		menu.add(0,2,0,"버전 정보");
-		menu.add(0,3,0,"이화앱센터 소개");
-		return true;
-	}
-	public boolean onOptionsItemSelected(MenuItem item){
-		switch(item.getItemId()){
-		case 1:
-			startActivity(new Intent(SetSaveObjectActivity.this, EditPassWordActivity.class));
-			return true;
-		case 2:
-			new AlertDialog.Builder(this)
-			.setMessage("현재 버전 v0.9")
-			.setPositiveButton("확인", new DialogInterface.OnClickListener() {
-				public void onClick(DialogInterface dialog, int which) {
-					dialog.dismiss();
-				}
-			}).show();
-			return true;
-		case 3:
-			startActivity(new Intent(SetSaveObjectActivity.this, EwhaInfoActivity.class));
-			return true;
-		}
-		return false;
-	}
+
 	@Override
 	public void onBackPressed() {
-/*		Intent intent = new Intent();
-		intent.setAction("com.ewhapp.money.SplashActivity.APPWIDGET_REQUEST");
-		sendBroadcast(intent);*/
 		startActivity(new Intent(SetSaveObjectActivity.this, SetGoalActivity.class));
 		this.finish();
 	}

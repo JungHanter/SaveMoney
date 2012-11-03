@@ -83,7 +83,7 @@ class MultiAdapter extends BaseAdapter {
 	}
 }
 
-public class MainActivity extends Activity {
+public class MainActivity extends SaveMoneyBaseActivity {
 	private ImageView btn_AddGoal;
 	private ImageView imgv_goalImg;
 	private TextView txtv_goalMoney;

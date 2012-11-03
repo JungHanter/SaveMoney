@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import com.ewhapp.money.UserData.SaveObjectInfo;
 
-public class RewardActivity extends Activity{
+public class RewardActivity extends SaveMoneyBaseActivity{
 	private UserData userData;
 	private ArrayList<SaveObjectInfo> objList;
 	private String name = "";
