@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rewardLayout"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="#FFFFFF"
@@ -7,24 +8,24 @@
 
     <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/rewardTop"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:gravity="center"
-        android:layout_weight="0.8"
-        android:orientation="horizontal" >
+        android:gravity="center" >
 
         <ImageView
             android:id="@+id/reward"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:src="@drawable/_reward_app" />
+            android:layout_marginBottom="30dp"
+            android:src="@drawable/reward" />
 
         <TextView
             android:id="@+id/rewardtext1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="200dp"
             android:text="당신의 노력으로 얻은"
             android:textSize="25sp" />
 
@@ -37,22 +38,30 @@
             android:layout_marginTop="25dp"
             android:text=""
             android:textSize="25sp" />
-    </RelativeLayout>
 
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:gravity="center"
-        android:orientation="horizontal" >
-
-        <Button
-            android:id="@+id/reward_newbtn"
+        <LinearLayout
+            android:id="@+id/reward_bottom"
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_margin="10dp"
-            android:text="새로운 목표 만들기" />
-    </LinearLayout>
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+             android:layout_centerHorizontal="true"
+             android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/saveimg_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="페이스북에 상장 올리기" />
+
+            <Button
+                android:id="@+id/reward_newbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="새로운 목표 만들기" />
+        </LinearLayout>
+    </RelativeLayout>
 
 </LinearLayout>

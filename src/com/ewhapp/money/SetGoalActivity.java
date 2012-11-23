@@ -5,7 +5,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
@@ -19,11 +18,10 @@ import android.os.Environment;
 import android.provider.MediaStore;
 import android.text.InputFilter;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 public class SetGoalActivity extends SaveMoneyBaseActivity {
@@ -32,7 +30,6 @@ public class SetGoalActivity extends SaveMoneyBaseActivity {
 	private ImageView imgv_goalImg;
 	private EditText edt_goal;
 	private EditText edt_money;
-	
 	private UserData userData;
 	
 	private boolean bSelectImg = false;
@@ -45,7 +42,7 @@ public class SetGoalActivity extends SaveMoneyBaseActivity {
 		SaveMoneyUtils.makeNomediaFile();
 		
 		userData = UserData.sharedUserData(this);
-		
+	
 		btn_prev = (ImageView) findViewById(R.id.setgoal_btn_prev);
 		btn_next = (ImageView) findViewById(R.id.setgoal_btn_next);
 		imgv_goalImg = (ImageView) findViewById(R.id.setgoal_img_goal);

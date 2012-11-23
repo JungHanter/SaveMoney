@@ -2,18 +2,18 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical"
-    android:background="#FFFFFF" >
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
 
     <RelativeLayout
         android:layout_width="fill_parent"
-        android:layout_height="66.66667dip"
+        android:layout_height="50.66667dip"
         android:background="@drawable/title_bar"
         android:padding="0dip" >
 
         <ImageView
             android:id="@+id/setgoal_btn_next"
-            android:layout_width="wrap_content"
+            android:layout_width="50dp"
             android:layout_height="fill_parent"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
@@ -22,7 +22,7 @@
 
         <ImageView
             android:id="@+id/setgoal_btn_prev"
-            android:layout_width="wrap_content"
+            android:layout_width="50dp"
             android:layout_height="fill_parent"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
@@ -36,49 +36,55 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:text="@string/app_title"
-            android:textSize="24sp"
-            android:textColor="#ffffff" />
-
+            android:textColor="#ffffff"
+            android:textSize="24sp" />
     </RelativeLayout>
 
-    <ImageView
-        android:id="@+id/setgoal_img_goal"
+    <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="200dip"
-        android:layout_gravity="center_vertical|center_horizontal"
-        android:padding="0dip"
-        android:layout_marginTop="36dip"
-        android:layout_marginBottom="30dip"
-        android:layout_marginLeft="26dip"
-        android:layout_marginRight="26dip"
-        android:scaleType="fitCenter"
-        android:src="@drawable/add_image"
-        android:background="#00FFFFFF" />
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:orientation="vertical" >
 
-    <EditText
-        android:id="@+id/setgoal_edt_goal"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/txt_whatGoal"
-        android:inputType="text"
-        android:layout_marginLeft="24dip"
-        android:layout_marginRight="24dip"
-        android:layout_marginBottom="18dip"
-        android:background="@drawable/edit_text_style" >
+        <ImageView
+            android:id="@+id/setgoal_img_goal"
+            android:layout_width="fill_parent"
+            android:layout_height="200dip"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_marginBottom="30dip"
+            android:layout_marginLeft="26dip"
+            android:layout_marginRight="26dip"
+            android:layout_marginTop="40dip"
+            android:background="#00FFFFFF"
+            android:padding="0dip"
+            android:scaleType="fitCenter"
+            android:src="@drawable/add_image" />
 
-        <!-- requestFocus /-->
-    </EditText>
+        <EditText
+            android:id="@+id/setgoal_edt_goal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="18dip"
+            android:layout_marginLeft="24dip"
+            android:layout_marginRight="24dip"
+            android:background="@drawable/edit_text_style"
+            android:ems="10"
+            android:hint="@string/txt_whatGoal"
+            android:inputType="text" >
 
-    <EditText
-        android:id="@+id/setgoal_edt_money"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/txt_goalMoney"
-        android:inputType="number"
-        android:layout_marginLeft="24dip"
-        android:layout_marginRight="24dip"
-        android:background="@drawable/edit_text_style" />
+            <!-- requestFocus / -->
+        </EditText>
+
+        <EditText
+            android:id="@+id/setgoal_edt_money"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dip"
+            android:layout_marginRight="24dip"
+            android:background="@drawable/edit_text_style"
+            android:ems="10"
+            android:hint="@string/txt_goalMoney"
+            android:inputType="number" />
+    </LinearLayout>
 
 </LinearLayout>

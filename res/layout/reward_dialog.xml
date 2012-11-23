@@ -2,33 +2,33 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#FFFFFF"
-	android:layout_marginLeft="10dp"
+    android:layout_gravity="center_vertical"
+    android:layout_marginBottom="10dp"
+    android:layout_marginLeft="10dp"
     android:layout_marginRight="10dp"
-    android:layout_marginBottom="40dp"
-    android:layout_gravity="center"
+    android:background="#FFFFFF"
     android:orientation="vertical" >
 
     <RelativeLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
+        android:layout_weight="0.9"
         android:gravity="center"
-        android:layout_weight="0.8"
         android:orientation="horizontal" >
 
         <ImageView
             android:id="@+id/reward"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:src="@drawable/_reward_app" />
+            android:src="@drawable/reward" />
 
         <TextView
             android:id="@+id/rewardtext1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="170dp"
             android:text="당신의 노력으로 얻은"
             android:textSize="25sp" />
 
@@ -47,22 +47,20 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
         android:gravity="center"
         android:orientation="horizontal" >
 
         <Button
             android:id="@+id/reward_openbtn"
-            android:layout_width="70dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
             android:text="앱 열기" />
 
         <Button
             android:id="@+id/reward_finbtn"
-            android:layout_width="70dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_marginLeft="40dp"
             android:text="닫기" />
     </LinearLayout>
 

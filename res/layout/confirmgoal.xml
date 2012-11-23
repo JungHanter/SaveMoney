@@ -1,36 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/confirmLayout"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical"
-    android:background="#FFFFFF" >
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
 
-	<RelativeLayout
+    <RelativeLayout
+        android:id="@+id/confirmTop"
         android:layout_width="fill_parent"
-        android:layout_height="66.66667dip"
+        android:layout_height="50.66667dip"
         android:background="@drawable/title_bar"
         android:padding="0dip" >
 
-	    <!-- 확인 메뉴 -->
+        <!-- 확인 메뉴 -->
+
         <ImageView
             android:id="@+id/confirmgoal_btn_edit"
-            android:layout_width="wrap_content"
+            android:layout_width="50dp"
             android:layout_height="fill_parent"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:clickable="true"
-            android:src="@drawable/btn_edit"/>
+            android:src="@drawable/btn_edit" />
 
         <ImageView
             android:id="@+id/confirmgoal_btn_share"
-            android:layout_width="wrap_content"
+            android:layout_width="50dp"
             android:layout_height="fill_parent"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:clickable="true"
-            android:src="@drawable/btn_share"/>
-        
+            android:src="@drawable/btn_share" />
+
         <!-- 편집 메뉴 -->
+
         <ImageView
             android:id="@+id/confirmgoal_btn_delete"
             android:layout_width="wrap_content"
@@ -58,9 +62,8 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:text="@string/app_title"
-            android:textSize="24sp"
-            android:textColor="#ffffff" />
-
+            android:textColor="#ffffff"
+            android:textSize="24sp" />
     </RelativeLayout>
 
     <TextView
@@ -68,24 +71,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dip"
+        android:layout_marginTop="14dip"
         android:text="엄마 귀걸이 사드리기"
         android:textColor="#000000"
-        android:layout_marginTop="14dip"
-        android:layout_marginBottom="10dip"
         android:textSize="20sp" />
-    
+
     <EditText
         android:id="@+id/confirmgoal_edt_title"
-        android:background="@drawable/edit_text_style"
-        android:inputType="text"
         android:layout_width="280dip"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="3dip"
+        android:layout_marginTop="7dip"
+        android:background="@drawable/edit_text_style"
         android:gravity="center_horizontal"
+        android:inputType="text"
         android:text="엄마 귀걸이 사드리기"
         android:textColor="#000000"
-        android:layout_marginTop="7dip"
-        android:layout_marginBottom="3dip"
         android:textSize="20sp"
         android:visibility="gone" />
 
@@ -94,64 +97,65 @@
         android:layout_width="fill_parent"
         android:layout_height="160dip"
         android:layout_gravity="center_vertical|center_horizontal"
-        android:padding="0dip"
-        android:clickable="false"
         android:layout_marginLeft="26dip"
         android:layout_marginRight="26dip"
+        android:background="#00FFFFFF"
+        android:clickable="false"
+        android:padding="0dip"
         android:scaleType="fitCenter"
-        android:src="@drawable/add_image"
-        android:background="#00FFFFFF" />
+        android:src="@drawable/add_image" />
 
     <TextView
         android:id="@+id/confirmgoal_txt_goalMoney"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:textColor="#000000"
-        android:text="￦150,000"
-        android:layout_marginTop="6dip"
         android:layout_marginBottom="8dip"
+        android:layout_marginTop="6dip"
+        android:text="￦150,000"
+        android:textColor="#000000"
         android:textSize="18sp" />
-    
+
     <EditText
         android:id="@+id/confirmgoal_edt_goalMoney"
-        android:background="@drawable/edit_text_style"
         android:layout_width="160dip"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:gravity="center_horizontal"
-        android:textColor="#000000"
-        android:text="￦150,000"
-        android:layout_marginTop="-1dip"
         android:layout_marginBottom="1dip"
-        android:textSize="18sp"
+        android:layout_marginTop="-1dip"
+        android:background="@drawable/edit_text_style"
+        android:gravity="center_horizontal"
         android:inputType="number"
+        android:text="￦150,000"
+        android:textColor="#000000"
+        android:textSize="18sp"
         android:visibility="gone" />
 
     <RelativeLayout
+        android:id="@+id/confirmBottom"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:background="#ffffff" >
+        android:background="#FFFFFF" >
 
         <LinearLayout
             android:id="@+id/resultLinear"
-            android:orientation="horizontal"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
+            android:background="#e0e0e0"
             android:gravity="center"
-            android:paddingTop="10dip"
+            android:orientation="horizontal"
             android:paddingBottom="10dip"
-            android:background="#e0e0e0" >
+            android:paddingTop="10dip" >
 
             <TextView
                 android:id="@+id/confirmgoal_txt_nowMoney"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="6dip"
-                android:textColor="#000000"
                 android:text="￦ 15,000"
+                android:textColor="#000000"
                 android:textSize="24sp" />
 
             <TextView
@@ -159,28 +163,26 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="6dip"
-                android:textColor="#000000"
                 android:text="(10%)"
+                android:textColor="#000000"
                 android:textSize="24sp" />
-
         </LinearLayout>
-       
+
         <ListView
             android:id="@+id/confirmgoal_list_saveobj"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:divider="#dfdfdf"
-            android:dividerHeight="1dip"
-            android:paddingTop="1dip"
-            android:paddingBottom="1dip"
-            android:background="#dfdfdf"
-        	android:orientation="vertical"
-        	android:layout_above="@+id/resultLinear"
+            android:layout_above="@+id/resultLinear"
             android:layout_alignParentLeft="true"
             android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true" >
+            android:layout_alignParentTop="true"
+            android:background="#dfdfdf"
+            android:divider="#dfdfdf"
+            android:dividerHeight="1dip"
+            android:orientation="vertical"
+            android:paddingBottom="1dip"
+            android:paddingTop="1dip" >
         </ListView>
-        
     </RelativeLayout>
 
 </LinearLayout>
